@@ -1,0 +1,77 @@
+.revenue-container {
+position: relative;
+z-index: 1000;
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
+  max-width: 900px; 
+  margin: 20px auto;
+  border: 1px solid #02ccfe;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+body{
+    background-color: black;
+}
+
+.revenue-container h2 {
+  text-align: center;
+  color:blue;
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+.chart-section {
+  width: 100%;
+  height: 400px; 
+  background-color:black;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.table-section {
+  width: 100%;
+  overflow-x: auto; 
+}
+
+.revenue-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  min-width: 400px; 
+}
+
+.revenue-table th,
+.revenue-table td {
+  border: 1px solid #eee;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 0.95em;
+}
+
+.revenue-table th {
+  background-color: black;
+  color: #4a69bd;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.revenue-table tr:nth-child(even) {
+  background-color: black;
+  cursor: pointer;
+}
+
+.revenue-table tr:hover {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+}
+
+.revenue-table td {
+  color:white;
+}

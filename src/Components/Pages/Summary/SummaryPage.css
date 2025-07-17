@@ -1,0 +1,129 @@
+/* SummaryPage.css */
+
+.summary-page-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.summary-page-container h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.5em;
+  font-weight: 600;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.summary-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card h2 {
+  color: #34495e;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.summary-value {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #27ae60; /* A nice green for positive values */
+  margin-bottom: 10px;
+}
+
+.summary-detail {
+  font-size: 0.9em;
+  color: #7f8c8d;
+}
+
+/* Specific card color adjustments (optional) */
+.summary-card.total-sales .summary-value {
+  color: #27ae60; /* Green */
+}
+.summary-card.new-users .summary-value {
+  color: #3498db; /* Blue */
+}
+.summary-card.avg-revenue .summary-value {
+  color: #f39c12; /* Orange */
+}
+.summary-card.pending-actions .summary-value {
+  color: #e74c3c; /* Red */
+}
+
+
+.summary-content {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  line-height: 1.6;
+}
+
+.summary-content h2 {
+  color: #34495e;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+.summary-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.summary-content li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .summary-page-container h1 {
+    font-size: 2em;
+  }
+  .summary-card {
+    padding: 20px;
+  }
+  .summary-card h2 {
+    font-size: 1.2em;
+  }
+  .summary-value {
+    font-size: 2em;
+  }
+  .summary-content {
+    padding: 20px;
+  }
+  .summary-content h2 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .summary-page-container {
+    padding: 15px;
+  }
+  .summary-grid {
+    grid-template-columns: 1fr; 
+  }
+}
