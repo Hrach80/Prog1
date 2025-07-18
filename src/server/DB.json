@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "email": "user1@example.com",
+      "password": "strongpassword123",
+      "firstName": "Անուն",
+      "lastName": "Ազգանուն",
+      "country": "Armenia",
+      "phoneNumber": "+37491234567",
+      "knownLanguages": [
+        "JavaScript",
+        "Python"
+      ],
+      "id": "d4b3"
+    },
+    {
+      "email": "user2@example.com",
+      "password": "anotherpassword456",
+      "firstName": "Միքայել",
+      "lastName": "Սարգսյան",
+      "country": "Armenia",
+      "phoneNumber": "+37495543210",
+      "knownLanguages": [
+        "C#",
+        "Java"
+      ],
+      "id": "e78a"
+    },
+    {
+      "id": "f4ea",
+      "email": "hrachyavagarshakyan@gmail.com",
+      "password": "varujan2006",
+      "firstName": "Hrach",
+      "lastName": "Vagarshakyan",
+      "country": "Armenia",
+      "phoneNumber": "+37494395221",
+      "knownLanguages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "d345",
+      "email": "hrachyavagarshakyan@gmail.com",
+      "password": "varujan2006",
+      "firstName": "N",
+      "lastName": "Vagarshakyan",
+      "country": "Armenia",
+      "phoneNumber": "+37494395221",
+      "knownLanguages": [
+        "JavaScript"
+      ]
+    },
+    {
+      "id": "1aed",
+      "email": "hrachyavagarshakyan@gmail.com",
+      "password": "Simonyan1984",
+      "firstName": "Hrach",
+      "lastName": "Hrachya",
+      "country": "Armenia",
+      "phoneNumber": "+37494395221",
+      "knownLanguages": [
+        "Python"
+      ]
+    },
+    {
+      "id": "4c11",
+      "name": "Hrachya",
+      "email": "hrachyavagarshakyan@gmail.com",
+      "message": "barev dzez hargeli barekamner\n"
+    },
+    {
+      "id": "b576",
+      "name": "Hrachya",
+      "email": "hrachyavagarshakyan@gmail.com",
+      "message": "barior ape\n"
+    },
+    {
+      "id": "86e1",
+      "name": "Hrachya",
+      "email": "hrachyavagarshakyan@gmail.com",
+      "message": "jxayn ddza\n"
+    }
+  ]
+}

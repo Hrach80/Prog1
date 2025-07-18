@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import "../Certificat/Certificates.css"; // Համոզվեք, որ այս ճանապարհը ճիշտ է CSS ֆայլի համար
 
 // Ներմուծում ենք միայն մեկ անգամ, քանի որ բոլոր սերտիֆիկատները նույն նկարն ունեն
-import certificatePlaceholderImage from "../../images/certificate.jpg";
+import certificatePlaceholderImage from "../../images/sert1.jpg";
+import certificatePlaceholderImage2 from "../../images/sert2.jpg";
+import certificatePlaceholderImage3 from "../../images/sert3.jpg";
 
 const Certificates = () => {
   const navigate = useNavigate();
@@ -15,7 +17,7 @@ const Certificates = () => {
       title: "Web Development Basics",
       issuer: "Online Learning Platform",
       date: "March 2023",
-      image: certificatePlaceholderImage, // Օգտագործում ենք ներմուծված նկարը
+      image: certificatePlaceholderImage,
       description:
         "Completed a comprehensive course covering fundamental concepts of HTML, CSS, and JavaScript.",
     },
@@ -24,7 +26,7 @@ const Certificates = () => {
       title: "React.js Mastery",
       issuer: "Advanced Tech Academy",
       date: "August 2023",
-      image: certificatePlaceholderImage, // Օգտագործում ենք ներմուծված նկարը
+      image: certificatePlaceholderImage2, // Օգտագործում ենք ներմուծված նկարը
       description:
         "Achieved proficiency in building single-page applications with React, including hooks, state management, and routing.",
     },
@@ -33,7 +35,7 @@ const Certificates = () => {
       title: "Backend with Node.js",
       issuer: "Coding Skills Hub",
       date: "January 2024",
-      image: certificatePlaceholderImage, // Օգտագործում ենք ներմուծված նկարը
+      image: certificatePlaceholderImage3, // Օգտագործում ենք ներմուծված նկարը
       description:
         "Gained expertise in server-side development using Node.js, Express, and MongoDB.",
     },

@@ -17,7 +17,7 @@ const Sidebar = () => {
     setIsOpen(!isOpen);
   };
 
-  const miniIconProps = { size: 25, color: "rgb(62, 62, 62)" };
+  const miniIconProps = { size: 25, color: "rgba(4, 171, 243, 1)" };
   const bodyIconProps = { size: 25, color: "rgb(62, 62, 62)" };
   const emailIconProps = { size: 45, color: "rgb(62, 62, 62)" };
 
@@ -61,9 +61,9 @@ const Sidebar = () => {
         <Link to="/Summary" className="barp">
           <MdOutlineSummarize {...bodyIconProps} /> Summary
         </Link>
-        <p className="barp">
-          <IoLockClosed {...bodyIconProps} /> Password
-        </p>
+        <Link to="/Registration" className="barp">
+          <IoLockClosed {...bodyIconProps} /> Registration
+        </Link>
         <p className="barp">
           <BiLike {...bodyIconProps} /> Like
         </p>

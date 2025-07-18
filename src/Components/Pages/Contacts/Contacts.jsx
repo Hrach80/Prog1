@@ -1,5 +1,5 @@
 import "../Contacts/Contacts.css";
-import React, { useRef, useEffect } from "react"; 
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,
@@ -11,22 +11,11 @@ import {
   faGithub,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { useContactForm } from "../../../hooks/useContactForm";
 
 const Contacts = () => {
-  const nameInputRef = useRef(null);
-
-  useEffect(() => {
-    if (nameInputRef.current) {
-      nameInputRef.current.focus();
-    }
-  }, []);
-
-  
-  const focusOnNameInput = () => {
-    if (nameInputRef.current) {
-      nameInputRef.current.focus();
-    }
-  };
+  const { form, handleChange, handleSubmit, nameInputRef, focusOnNameInput } =
+    useContactForm();
 
   return (
     <div className="ContactsBox">
@@ -85,29 +74,41 @@ const Contacts = () => {
               rel="noopener noreferrer"
               className="socialIconLink"
             >
-              <FontAwesomeIcon icon={faXTwitter} className="socialIcon" />{" "}
+              <FontAwesomeIcon icon={faXTwitter} className="socialIcon" />
             </a>
           </div>
         </div>
         <div className="ContactForm">
           <h2 className="formH2">Send a Message</h2>
-          <form className="contactForm">
+          <form className="contactForm" onSubmit={handleSubmit}>
             <input
               ref={nameInputRef}
               onClick={focusOnNameInput}
               type="text"
+              name="name"
+              value={form.name}
+              onChange={handleChange}
               placeholder="Your Name"
               className="formInput"
+              required
             />
             <input
               type="email"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
               placeholder="Your Email"
               className="formInput"
+              required
             />
             <textarea
+              name="message"
+              value={form.message}
+              onChange={handleChange}
               placeholder="Your Message"
               rows="5"
               className="formTextarea"
+              required
             ></textarea>
             <button type="submit" className="submitButton">
               Send Message
