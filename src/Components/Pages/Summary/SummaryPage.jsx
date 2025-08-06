@@ -1,11 +1,15 @@
 import React from "react";
-import "./SummaryPage.css"; // Make sure to create this CSS file
+import "./SummaryPage.css";
+import { useNavigate } from "react-router-dom";
 
 const SummaryPage = () => {
+  const navigate=useNavigate()
   return (
     <div className="summary-page-container">
       <h1>Summary Overview</h1>
-
+      <button onClick={() => navigate("/")} className="btnBec-scss">
+        Back to About Me
+      </button>
       <div className="summary-grid">
         <div className="summary-card total-sales">
           <h2>Total Sales</h2>

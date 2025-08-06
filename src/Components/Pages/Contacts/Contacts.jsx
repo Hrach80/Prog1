@@ -28,19 +28,39 @@ const Contacts = () => {
           </p>
           <div className="contactDetails">
             <div className="detailItem">
-              <FontAwesomeIcon icon={faEnvelope} className="contactIcon" />
+              <a
+                className="contact-icon-link"
+                href="mailto:hrachyavagarshakyan@gmail.com"
+              >
+                <span>
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </span>
+              </a>
               <a className="contA" href="mailto:hrachyavagarshakyan@gmail.com">
                 hrachyavagarshakyan@gmail.com
               </a>
             </div>
             <div className="detailItem">
-              <FontAwesomeIcon icon={faPhone} className="contactIcon" />
+              <a className="contact-icon-link" href="tel:+37494395221">
+                <span>
+                  <FontAwesomeIcon icon={faPhone} />
+                </span>
+              </a>
               <a className="contA" href="tel:+37494395221">
                 +37494395221
               </a>
             </div>
             <div className="detailItem">
-              <FontAwesomeIcon icon={faMapMarkerAlt} className="contactIcon" />
+              <a
+                className="contact-icon-link"
+                href="https://www.google.com/maps/search/?api=1&query=Yerevan%2C%20Armenia"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} />
+                </span>
+              </a>
               <a
                 className="contA"
                 href="https://www.google.com/maps/search/?api=1&query=Yerevan%2C%20Armenia"
@@ -58,7 +78,9 @@ const Contacts = () => {
               rel="noopener noreferrer"
               className="socialIconLink"
             >
-              <FontAwesomeIcon icon={faLinkedin} className="socialIcon" />
+              <span>
+                <FontAwesomeIcon icon={faLinkedin} />
+              </span>
             </a>
             <a
               href="https://github.com/yourusername"
@@ -66,7 +88,9 @@ const Contacts = () => {
               rel="noopener noreferrer"
               className="socialIconLink"
             >
-              <FontAwesomeIcon icon={faGithub} className="socialIcon" />
+              <span>
+                <FontAwesomeIcon icon={faGithub} />
+              </span>
             </a>
             <a
               href="https://twitter.com/yourusername"
@@ -74,7 +98,9 @@ const Contacts = () => {
               rel="noopener noreferrer"
               className="socialIconLink"
             >
-              <FontAwesomeIcon icon={faXTwitter} className="socialIcon" />
+              <span>
+                <FontAwesomeIcon icon={faXTwitter} />
+              </span>
             </a>
           </div>
         </div>

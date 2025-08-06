@@ -11,7 +11,7 @@ const Footer = () => {
         <p>
           Follow us on{" "}
           <a href="https://twitter.com" className="footer-link">
-            Twitter
+            X
           </a>{" "}
           and{" "}
           <a href="https://facebook.com" className="footer-link">

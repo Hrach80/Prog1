@@ -1,51 +1,59 @@
-/* --- Modal Overlay Styles --- */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Darker overlay for contrast */
+  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align to the top with margin */
+  align-items: flex-start;
   z-index: 1000;
   overflow-y: auto;
 }
 
-/* --- Modal Content Styles --- */
 .modal-content {
-  background-color: #2c2c2c; /* Darker background for the modal */
-  color: #e0e0e0; /* Light text color for contrast */
-  padding: 20px;
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  padding: 30px;
+  border-radius: 12px;
   width: 90%;
-  max-width: 800px;
-  max-height: 500px;
+  max-width: 700px;
+  max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 0 10px 5px rgba(0, 191, 255, 0.6); /* Enhanced glowing blue shadow */
-  transform: translateY(-100%);
-  animation: slideIn 0.4s forwards;
-  margin-top: 40px;
-  border: 1px solid rgba(0, 191, 255, 0.4); /* Subtle blue border */
+  box-shadow: 0 0 20px 8px rgba(0, 191, 255, 0.7);
+  border: 2px solid rgba(0, 191, 255, 0.6);
+  animation: fadeInZoomIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
-/* Animation for closing modal */
-.modal-overlay.closing .modal-content {
-  animation: slideOut 0.4s forwards;
+.modal-close-button {
+  background-color: transparent;
 }
 
-/* Keyframe animations for modal entry/exit */
-@keyframes slideIn {
+.modal-close-button:hover {
+  background-color: transparent;
+}
+
+@keyframes fadeInZoomIn {
   from {
-    transform: translateY(-100%);
-    opacity: 0; /* Fade in effect */
+    opacity: 0;
+    transform: scale(0.8);
   }
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: scale(1);
   }
+}
+
+.modal-overlay.closing .modal-content {
+  animation: slideOut 0.4s forwards;
 }
 
 @keyframes slideOut {
@@ -55,11 +63,10 @@
   }
   to {
     transform: translateY(-100%);
-    opacity: 0; /* Fade out effect */
+    opacity: 0;
   }
 }
 
-/* --- Close Button Styles --- */
 .modal-close-button {
   position: absolute;
   top: 10px;
@@ -68,33 +75,31 @@
   border: none;
   font-size: 22px;
   cursor: pointer;
-  color: #888; /* Softer close button color */
+  color: #888;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .modal-close-button:hover {
-  color: #00bfff; /* Bright blue on hover */
-  transform: rotate(90deg); /* Small rotation on hover */
+  color: #00bfff;
+  transform: rotate(90deg);
 }
 
-/* --- Heading Styles --- */
 h2 {
   text-align: center;
-  color: #00bfff; /* Bright blue heading */
+  color: #00bfff;
   font-size: 20px;
-  margin-bottom: 15px; /* Added margin for spacing */
-  text-shadow: 0 0 5px rgba(0, 191, 255, 0.5); /* Subtle glow effect */
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px rgba(0, 191, 255, 0.5);
 }
 
-/* --- Form Group Styles --- */
 .form-group {
-  margin-bottom: 2px; /* Space between form groups */
+  margin-bottom: 2px;
 }
 
 .form-group label {
   display: block;
   font-weight: bold;
-  color: #b0b0b0; /* Lighter color for labels */
+  color: #b0b0b0;
   font-size: 12px;
 }
 
@@ -105,12 +110,12 @@ h2 {
 .form-group select {
   width: calc(100% - 16px);
   padding: 6px;
-  border: 1px solid #555; /* Darker border for inputs */
+  border: 1px solid #555;
   border-radius: 4px;
   font-size: 14px;
-  background-color: #3a3a3a; /* Darker input background */
-  color: #e0e0e0; /* Light text color in inputs */
-  box-sizing: border-box; /* Include padding in element's total width and height */
+  background-color: #3a3a3a;
+  color: #e0e0e0;
+  box-sizing: border-box;
 }
 
 .form-group input[type="email"]:focus,
@@ -119,31 +124,29 @@ h2 {
 .form-group input[type="tel"]:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #00bfff; /* Bright blue focus border */
-  box-shadow: 0 0 6px rgba(0, 191, 255, 0.5); /* Prominent blue glow on focus */
+  border-color: #00bfff;
+  box-shadow: 0 0 6px rgba(0, 191, 255, 0.5);
 }
 
-/* --- Checkbox Group Styles --- */
 .checkbox-group {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 15px; /* Space below checkbox group */
+  margin-bottom: 15px;
 }
 
 .checkbox-group label {
   display: flex;
   align-items: center;
   font-weight: normal;
-  color: #e0e0e0; /* Light text for checkboxes */
+  color: #e0e0e0;
   font-size: 14px;
   cursor: pointer;
 }
 
 .checkbox-group input[type="checkbox"] {
   margin-right: 4px;
-  /* Custom checkbox style */
-  appearance: none; /* Hide default checkbox */
+  appearance: none;
   -webkit-appearance: none;
   width: 14px;
   height: 14px;
@@ -161,12 +164,12 @@ h2 {
   height: 8px;
   transform: scale(0);
   transition: transform 0.2s ease;
-  box-shadow: inset 1em 1em #00bfff; /* Blue checkmark */
+  box-shadow: inset 1em 1em #00bfff;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
 }
 
 .checkbox-group input[type="checkbox"]:checked {
-  background-color: #00bfff; /* Blue background when checked */
+  background-color: #00bfff;
   border-color: #00bfff;
 }
 
@@ -174,41 +177,39 @@ h2 {
   transform: scale(1);
 }
 
-
-/* --- Submit Button Styles --- */
 .submit-button {
   width: 100%;
   padding: 8px 15px;
-  background-color: #00bfff; /* Bright blue button */
+  background-color: #00bfff;
   color: white;
   border: none;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
   margin-top: 1px;
   font-weight: bold;
 }
 
 .submit-button:hover {
-  background-color: #009acd; /* Slightly darker blue on hover */
-  transform: translateY(-1px); /* Slight lift effect */
-  box-shadow: 0 2px 8px rgba(0, 191, 255, 0.4); /* Enhanced shadow on hover */
+  background-color: #009acd;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 191, 255, 0.4);
 }
 
 .submit-button:active {
-  transform: translateY(0); /* Press down effect */
+  transform: translateY(0);
   box-shadow: 0 1px 3px rgba(0, 191, 255, 0.4);
 }
 
-/* --- Responsive Design for Smaller Screens --- */
 @media (max-width: 600px) {
   .modal-content {
     width: 95%;
     max-width: unset;
     padding: 15px;
     margin-top: 15px;
-    max-height: 0vh;
+    max-height: 95vh;
   }
 
   h2 {

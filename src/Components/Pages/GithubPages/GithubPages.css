@@ -1,0 +1,193 @@
+.github-page-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.github-page-title {
+  text-align: center;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  border-bottom: 3px solid #6e5494;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.github-section {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-header {
+  background-color: #6e5494;
+  color: white;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25em;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.section-header:hover {
+  background-color: #5a457a;
+  border-radius: 8px 8px 0 0;
+}
+
+.github-section.open .section-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.toggle-icon {
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+.github-section.open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out, border-top 0.6s ease-in-out;
+  padding: 0 20px;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+.github-section.open .section-content {
+  max-height: 1500px;
+  padding: 15px 20px 20px;
+  border-top: 1px solid #444;
+}
+
+p {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+ol {
+  list-style-type: decimal;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+h3 {
+  color: #6e5494;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  border-bottom: 1px dashed #6e5494;
+  padding-bottom: 4px;
+}
+
+.code-example {
+  background-color: #111;
+  border: 1px solid #444;
+  border-left: 5px solid #6e5494;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.code-example pre {
+  margin: 0;
+}
+
+.code-example code {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  color: #f6eec7;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.external-link, .internal-link {
+  color: #0366d6;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.external-link:hover, .internal-link:hover {
+  color: #005cc5;
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+
+.external-link svg, .internal-link svg {
+  vertical-align: middle;
+  margin-left: 6px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .github-page-title {
+    font-size: 2em;
+  }
+
+  .section-header {
+    font-size: 1.1em;
+    padding: 12px 15px;
+  }
+
+  .section-content {
+    padding: 10px 15px 15px;
+  }
+
+  p, ul, li, ol {
+    font-size: 0.9em;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .code-example {
+    padding: 10px 12px;
+  }
+
+  .code-example code {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .github-page-title {
+    font-size: 1.8em;
+  }
+}

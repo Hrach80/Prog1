@@ -1,81 +1,267 @@
+body {
+  background-image: url(https://ihde.tsu.ru/wp-content/uploads/2017/10/background-dev_school4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
 .AboutBox {
-  background-color: black;
   max-width: 1440px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: auto;
 }
+
 .abautH1 {
-  color: white;
-  font-size: 30px;
+  color: red;
+  font-size: 36px;
+  font-family: "My Soul", cursive;
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 0;
 }
+
 .AbautOne {
-  max-width: 1440px;
+  width: 100%;
   display: flex;
-  gap: 100px;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
+
 .AbautImg {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   box-shadow: 0 0 10px 1px blue;
+  flex-shrink: 0;
+  object-fit: cover;
 }
+
 .AbautCv {
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
+  box-sizing: border-box;
 }
+
 .AbautP {
-  color: white;
-  font-size: 12px;
+  color: rgb(118, 207, 255);
+  font-size: 14px;
   text-align: start;
+  font-family: "My Soul", cursive;
   width: 100%;
+  line-height: 1.5;
 }
+
 .Abouth3 {
-  color: white;
+  color: blue;
   font-size: 24px;
   text-align: start;
   width: 100%;
   margin-top: 20px;
+  font-family: "My Soul", cursive;
 }
+
 .skill {
+  max-width: 750px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
+
 .skilla {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: white;
-  padding: 4px 15px;
+  padding: 2px 10px;
+  font-size: 14px;
   background-color: rgb(26, 26, 26);
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+  white-space: nowrap;
 }
+
 .skilla:hover {
   color: red;
   box-shadow: 0 0 10px 0.5px red;
 }
+
 .skilsilka {
-  width: 400px;
-  height: 100px;
+  max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
+  align-items: flex-start;
+  margin-top: 20px;
 }
+
 .adiv {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
 }
-.pFemli{
-    font-family: "My Soul", cursive;
-    font-size: 18px;
-    color: rgb(0, 255, 247);
+
+.pFemli {
+  font-family: "My Soul", cursive;
+  font-size: 18px;
+  color: rgb(0, 255, 247);
+  text-align: center;
+  margin: 0;
+}
+
+.skills-styl {
+  color: rgb(248, 246, 242);
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.waffle-menu-button {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(15, 15, 15, 0.8);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease-in-out;
+}
+
+.waffle-menu-button:hover {
+  background-color: rgba(41, 40, 40, 0.9);
+}
+
+@media (max-width: 992px) {
+  .AbautOne {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .AbautCv {
+    align-items: center;
     text-align: center;
+    padding: 0 10px;
+  }
+  .AbautP,
+  .Abouth3 {
+    text-align: center;
+  }
+  .AbautImg {
+    width: 180px;
+    height: 180px;
+  }
+  .skilsilka {
+    align-items: center;
+    max-width: 100%;
+  }
+  .adiv {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .waffle-menu-button {
+    display: block;
+  }
+  .sidebarBox {
+    display: none;
+  }
+  .sidebarBox.open {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .sidebarBox .sidebarmini {
+    display: none;
+  }
+  .sidebarBox .sidebarbody {
+    transform: translateX(0);
+    opacity: 1;
+    width: 90%;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 20px;
+    /* Սա է ուղղված կոդի ամենակարևոր մասը */
+    pointer-events: none;
+  }
+  /* Սա է ուղղված կոդի ամենակարևոր մասը */
+  .sidebarBox .sidebarbody > * {
+    pointer-events: auto;
+  }
+  .abautH1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .AbautImg {
+    width: 150px;
+    height: 150px;
+  }
+  .Abouth3 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .AbautP {
+    font-size: 12px;
+  }
+  .pFemli {
+    font-size: 16px;
+  }
+  .skilla {
+    padding: 3px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .abautH1 {
+    font-size: 24px;
+  }
+  .AbautImg {
+    width: 120px;
+    height: 120px;
+  }
+  .Abouth3 {
+    font-size: 18px;
+  }
+  .AbautP {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+  .skilsilka {
+    margin-top: 10px;
+  }
+  .pFemli {
+    font-size: 14px;
+  }
 }

@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Certificat/Certificates.css"; // Համոզվեք, որ այս ճանապարհը ճիշտ է CSS ֆայլի համար
-
-// Ներմուծում ենք միայն մեկ անգամ, քանի որ բոլոր սերտիֆիկատները նույն նկարն ունեն
+import "../Certificat/Certificates.css"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 import certificatePlaceholderImage from "../../images/sert1.jpg";
 import certificatePlaceholderImage2 from "../../images/sert2.jpg";
 import certificatePlaceholderImage3 from "../../images/sert3.jpg";
 
 const Certificates = () => {
   const navigate = useNavigate();
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
 
   // Ձեր սերտիֆիկատների տվյալները
   const certificatesData = [
@@ -26,7 +28,7 @@ const Certificates = () => {
       title: "React.js Mastery",
       issuer: "Advanced Tech Academy",
       date: "August 2023",
-      image: certificatePlaceholderImage2, // Օգտագործում ենք ներմուծված նկարը
+      image: certificatePlaceholderImage2, 
       description:
         "Achieved proficiency in building single-page applications with React, including hooks, state management, and routing.",
     },
@@ -42,12 +44,19 @@ const Certificates = () => {
     // Ավելացրեք այլ սերտիֆիկատներ այստեղ
   ];
 
+  const openModal = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedImage("");
+  };
+
   return (
     <div className="certificates-page">
-      <button
-        onClick={() => navigate("/About Mi")}
-        className="certificates-back-btn"
-      >
+      <button onClick={() => navigate("/")} className="btnBec-scss">
         Back to About Me
       </button>
 
@@ -56,11 +65,19 @@ const Certificates = () => {
       <div className="certificates-grid">
         {certificatesData.map((cert) => (
           <div key={cert.id} className="certificate-card">
-            <img
-              src={cert.image}
-              alt={cert.title}
-              className="certificate-image"
-            />
+            <div className="certificate-image-container">
+              <img
+                src={cert.image}
+                alt={cert.title}
+                className="certificate-image"
+              />
+              <div
+                className="view-icon-overlay"
+                onClick={() => openModal(cert.image)}
+              >
+                <FontAwesomeIcon icon={faEye} className="view-icon" />
+              </div>
+            </div>
             <div className="certificate-info">
               <h2 className="certificate-card-title">{cert.title}</h2>
               <p className="certificate-issuer">Issued by: {cert.issuer}</p>
@@ -70,6 +87,21 @@ const Certificates = () => {
           </div>
         ))}
       </div>
+
+      {modalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="modal-close-btn" onClick={closeModal}>
+              &times;
+            </span>
+            <img
+              src={selectedImage}
+              alt="Enlarged Certificate"
+              className="modal-image"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

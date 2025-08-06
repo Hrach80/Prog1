@@ -1,0 +1,127 @@
+.jsPagesBox {
+  background: #0f121b;
+  color: #f1f5f9;
+  min-height: 100vh;
+  padding: 32px 0 64px 0;
+  font-family: "Segoe UI", "Fira Mono", monospace;
+}
+
+.jsPagesBox h1 {
+  text-align: center;
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+  color: #00e6ae; 
+}
+.jsDesc {
+  text-align: center;
+  font-size: 1.16rem;
+  margin-bottom: 2.2rem;
+  color: #b3b9ce;
+}
+
+.jsAccordion {
+  max-width: 900px;
+  margin: 0 auto 2.5rem auto;
+}
+
+.jsAccordionItem {
+  margin-bottom: 1rem;
+}
+
+.jsAccordionBtn {
+  width: 100%;
+  background: #23262f;
+  color: #00e6ae;
+  font-size: 1.13rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.12s;
+  outline: none;
+  box-shadow: 0 2px 12px #0009;
+}
+
+.jsAccordionBtn.active,
+.jsAccordionBtn:hover {
+  background: #0d2233;
+  color: #fff;
+}
+
+.jsMethodList {
+  background: #2232b0;
+  border-radius: 0 0 10px 10px;
+  margin: 0;
+  padding: 0.8rem 1.3rem 0.6rem 1.3rem;
+  list-style: none;
+  box-shadow: 0 4px 16px #0008;
+}
+
+.jsMethodItem {
+  color: #60f2a6;
+  padding: 0.4rem 0;
+  font-size: 1.06rem;
+  cursor: pointer;
+  border-bottom: 1px solid #23262f;
+  transition: color 0.13s;
+}
+
+.jsMethodItem:hover,
+.jsMethodItem:focus {
+  color: #fff;
+  background: #14506b;
+  outline: none;
+}
+
+.jsSection {
+  max-width: 900px;
+  margin: 2.2rem auto;
+  background: #21242d;
+  border-radius: 12px;
+  box-shadow: 0 2px 18px #000b;
+  padding: 2rem 1.7rem 1.2rem 1.7rem;
+}
+
+.jsSection h2 {
+  color: #00e6ae;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.jsSection pre {
+  background: #181a20;
+  color: #fff4d2;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 0.7em 0;
+  font-family: "Fira Mono", "Consolas", monospace;
+  white-space: pre;
+  box-shadow: 0 1px 8px #0008;
+  overflow-x: auto;
+}
+
+.jsSection ul {
+  margin: 0.6em 0 0.6em 1.2em;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.jsFooter {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-top: 3rem;
+  color: #b3b9ce;
+}
+
+.jsFooter a {
+  color: #00e6ae;
+  text-decoration: underline;
+  transition: color 0.15s;
+}
+.jsFooter a:hover {
+  color: #fff;
+}

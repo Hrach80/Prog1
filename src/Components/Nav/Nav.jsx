@@ -8,7 +8,7 @@ export const Nav = () => {
         className={({ isActive }) =>
           isActive ? "NavLink NavActive" : "NavLink"
         }
-        to="/About Mi"
+        to="/"
       >
         About Mi
       </NavLink>
@@ -16,7 +16,7 @@ export const Nav = () => {
         className={({ isActive }) =>
           isActive ? "NavLink NavActive" : "NavLink"
         }
-        to="/"
+        to="/Projects"
       >
         Projects
       </NavLink>

@@ -1,9 +1,9 @@
 .revenue-container {
-position: relative;
-z-index: 1000;
+  position: relative;
+  z-index: 1000;
   font-family: 'Arial', sans-serif;
   padding: 20px;
-  max-width: 900px; 
+  max-width: 900px;
   margin: 20px auto;
   border: 1px solid #02ccfe;
   border-radius: 8px;
@@ -14,21 +14,22 @@ z-index: 1000;
   align-items: center;
   gap: 30px;
 }
-body{
-    background-color: black;
+
+body {
+  background-color: black;
 }
 
 .revenue-container h2 {
   text-align: center;
-  color:blue;
+  color: rgb(0, 250, 133);
   margin-bottom: 15px;
   font-size: 2em;
 }
 
 .chart-section {
   width: 100%;
-  height: 400px; 
-  background-color:black;
+  height: 400px;
+  background-color: black;
   border-radius: 6px;
   padding: 15px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -36,14 +37,14 @@ body{
 
 .table-section {
   width: 100%;
-  overflow-x: auto; 
+  overflow-x: auto;
 }
 
 .revenue-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;
-  min-width: 400px; 
+  min-width: 400px;
 }
 
 .revenue-table th,
@@ -73,5 +74,41 @@ body{
 }
 
 .revenue-table td {
-  color:white;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .revenue-container {
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .revenue-container h2 {
+    font-size: 1.5em;
+  }
+
+  .chart-section {
+    height: 300px;
+  }
+
+  .revenue-table th,
+  .revenue-table td {
+    padding: 8px 10px;
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 480px) {
+  .revenue-container {
+    margin: 10px auto;
+  }
+
+  .revenue-table th,
+  .revenue-table td {
+    padding: 6px 8px;
+  }
+
+  .revenue-table {
+    min-width: 300px;
+  }
 }

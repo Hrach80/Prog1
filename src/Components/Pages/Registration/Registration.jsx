@@ -25,7 +25,6 @@ const Registration = () => {
       setIsModalOpen(false);
     }
   };
-
   return (
     <div className="registration-page">
       <div className="registration-content">

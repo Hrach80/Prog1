@@ -1,61 +1,257 @@
-.ProjectsBox{
-    background-color: black;
-    max-width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+.ProjectsBox {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  background-color: transparent;
+  padding: 20px;
+  margin: auto;
 }
-.ProjectDiv1{
-    display: flex;
-    width: 800px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1px;
-    color: white;
-}
-.NavP{
-    color: white;
-    font-size: 18px;
-    text-align: center;
-    width: 50%;
-}
-.projH2{
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    width: 300px;
-}
-.ProjectBox2{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 300px;
-}
-.yndProjects{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    height: 100%;
-}
-.projectone{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    width: 250px;
-    height: 150px;
-    background-color: rgb(94, 94, 95);
-    padding: 20px;
-    border-radius: 10px;
 
+.ProjectDiv1 {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.proj-h1 {
+  font-size: 2.5rem;
+  color: #ff3366;
+  font-family: "My Soul", cursive;
+  margin: 0;
+  text-shadow: 0 0 10px #ff3366, 0 0 5px rgba(255, 51, 102, 0.8);
+}
+
+.NavP {
+  font-size: 1.2rem;
+  color: #03a8ff;
+  font-family: "My Soul", cursive;
+  line-height: 1;
+  margin-top: 0px;
+  text-shadow: 0 0 8px #03a8ff, 0 0 3px rgba(3, 168, 255, 0.7);
+}
+
+.ProjectBox2 {
+  width: 100%;
+  max-width: 1200px;
+
+}
+
+.projH2 {
+  font-size: 2.1rem;
+  color: #03ff8e;
+  font-family: "My Soul", cursive;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #03ff8e, 0 0 5px rgba(3, 255, 142, 0.8);
+}
+
+.yndProjects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 60px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
+
+.projectone {
+  background-color: rgba(30, 30, 30, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(2, 255, 251, 0.6);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.projectone:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(2, 255, 251, 0.8);
+}
+
+.prog-video-title {
+  transform: translateY(-25px);
+  color: #ff3366;
+  font-family: "My Soul", cursive;
+  font-size: 1.8rem;
+  margin: 0 0 5px 0;
+  text-shadow: 0 0 8px #ff3366, 0 0 3px rgba(255, 51, 102, 0.7);
+  text-align: center;
+}
+
+.projectVideo {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0, 242, 255, 0.5);
+  display: block;
+}
+
+.video-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.like-button,
+.comment-button,
+.submit-comment-button {
+  background-color: rgba(1, 64, 62, 0.8);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s, color 0.2s;
+  backdrop-filter: blur(5px);
+  white-space: nowrap;
+}
+
+.like-button:hover,
+.comment-button:hover,
+.submit-comment-button:hover {
+  background-color: rgba(3, 45, 64, 0.9);
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.6);
+  color: #03a8ff;
+  border-color: rgba(3, 168, 255, 0.3);
+}
+
+.comment-section {
+  width: 100%;
+  background-color: rgba(61, 61, 61, 0.7);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(3, 168, 255, 0.3);
+  border-radius: 8px;
+  background-color: rgba(26, 26, 26, 0.8);
+  color: #f0f0f0;
+  resize: vertical;
+  min-height: 80px;
+  box-sizing: border-box;
+  backdrop-filter: blur(5px);
+}
+
+.comment-textarea::placeholder {
+  color: #aaa;
+}
+
+.comments-list {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding-right: 10px;
+}
+
+.comments-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.comments-list::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
+}
+
+.single-comment {
+  background-color: rgba(68, 68, 68, 0.8);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  backdrop-filter: blur(5px);
+}
+
+.single-comment strong {
+  color: #ff3366;
+}
+
+.error-message {
+  color: #ff4d4f;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .proj-h1 {
+    font-size: 2rem;
+  }
+  .NavP {
+    font-size: 1rem;
+  }
+  .projH2 {
+    font-size: 1.8rem;
+  }
+  .yndProjects {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 10px;
+  }
+  .projectone {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proj-h1 {
+    font-size: 1.8rem;
+  }
+  .NavP {
+    font-size: 0.9rem;
+  }
+  .projH2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+  }
+  .prog-video-title {
+    font-size: 1.5rem;
+  }
+  .video-actions {
+    gap: 10px;
+  }
+  .like-button,
+  .comment-button,
+  .submit-comment-button {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+  .comment-section {
+    padding: 10px;
+  }
+  .comment-textarea {
+    min-height: 60px;
+    font-size: 0.9em;
+  }
+  .single-comment {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
 }

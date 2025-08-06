@@ -1,9 +1,14 @@
 .ContactsBox {
   padding: 10px 20px;
-  background-color: black;
-  height: 100vh;
+  background-color: transparent;
+  height: auto;
+  min-height: 100vh;
   color: #333;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .contactsH1 {
@@ -12,6 +17,7 @@
   margin-bottom: 40px;
   position: relative;
   display: inline-block;
+  padding-bottom: 10px;
 }
 
 .contactsH1::after {
@@ -19,7 +25,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -10px;
+  bottom: 0;
   width: 80px;
   height: 4px;
   background-color: red;
@@ -32,60 +38,119 @@
   justify-content: center;
   gap: 40px;
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
 .ContactInfo,
 .ContactForm {
-  background-color: rgb(28, 26, 26);
+  background-color: transparent;
+  box-shadow: 0 5px 15px red;
   border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 30px;
   flex: 1;
   min-width: 300px;
   max-width: 500px;
   text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.ContactInfo:hover,
+.ContactForm:hover {
+  transform: translateY(-5px);
 }
 
 .ContactInfo .contactP {
   font-size: 1.1em;
   line-height: 1.6;
   margin-bottom: 30px;
-  color: blue;
+  color: rgb(0, 200, 255);
 }
 
 .contactDetails .detailItem {
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 1.05em;
   color: white;
 }
 
-.contactIcon {
-  color: blue;
-  font-size: 1.5em;
-  margin-right: 15px;
-  width: 25px;
-  text-align: center;
+.contact-icon-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 25px;
+  text-decoration: none;
+  background: linear-gradient(to bottom, #d6d6d6, #f3f3f3);
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff, 0 0 0 3px #f0f0f0;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-icon-link span {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #98c6ef 0%, #2e8bdf 100%);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.7), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon-link .svg-inline--fa {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.contact-icon-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 1px 1px #fff, 0 0 0 3px #f0f0f0;
 }
 
 .socialLinks {
-  margin-top: 30px;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .socialIconLink {
-  color: blue;
-  font-size: 2.2em;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background: linear-gradient(to bottom, #d6d6d6, #f3f3f3);
+  border: 1px solid #c9c9c9;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 1px 1px #fff, 0 0 0 4px #f0f0f0;
+  transition: all 0.2s ease-in-out;
+}
+
+.socialIconLink span {
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #98c6ef 0%, #2e8bdf 100%);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.7), inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.socialIconLink .svg-inline--fa {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 .socialIconLink:hover {
-  color: red;
-  transform: translateY(-5px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3), inset 0 1px 1px #fff, 0 0 0 4px #f0f0f0;
 }
 
 .ContactForm .formH2 {
@@ -102,27 +167,28 @@
 
 .formInput,
 .formTextarea {
-  width: calc(100% - 20px); 
-  padding: 12px 10px;
+  width: 100%;
+  padding: 12px;
   margin-bottom: 18px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1em;
   font-family: inherit;
-  background-color: #3a3a3a; 
+  background-color: transparent;
   color: white;
   transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-sizing: border-box;
 }
 
 .formInput::placeholder,
 .formTextarea::placeholder {
-  color: #bbb; 
+  color: #bbb;
 }
 
 .formInput:focus,
 .formTextarea:focus {
   border-color: blue;
-  box-shadow: 0 0 8px rgba(0, 0, 255, 0.4); 
+  box-shadow: 0 0 8px rgba(0, 0, 255, 0.4);
   outline: none;
 }
 
@@ -132,25 +198,34 @@
 }
 
 .submitButton {
-  background-color: black;
-  color: white;
-  padding: 14px 25px;
-  border: none;
-  border-radius: 6px;
+  display: inline-block;
+  padding: 12px 25px;
   font-size: 1.1em;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.4);
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(to bottom, #72c6ff 0%, #0099ff 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(255, 255, 255, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease-in-out;
   align-self: center;
   width: auto;
-  box-shadow: 0 0 10px 1px blue;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
 }
 
 .submitButton:hover {
-  color: red;
-  box-shadow: 0 0 10px 1px red;
+  background: linear-gradient(to bottom, #86d1ff 0%, #1a9cff 100%);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3), inset 0 0 12px rgba(255, 255, 255, 1), inset 0 0 25px rgba(255, 255, 255, 0.7);
   transform: translateY(-2px);
+  color: white;
+}
+
+.submitButton:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contA {
@@ -167,34 +242,83 @@
   .ContactsContent {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
-
   .ContactInfo,
   .ContactForm {
     width: 90%;
-    max-width: 500px;
+    max-width: 600px;
+    min-width: unset;
+  }
+  .contactsH1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .socialLinks {
+    margin-top: 50px;
+    gap: 20px;
+  }
+  .contact-icon-link,
+  .socialIconLink {
+    width: 35px;
+    height: 35px;
+  }
+  .contact-icon-link .svg-inline--fa {
+    font-size: 1rem;
+  }
+  .socialIconLink .svg-inline--fa {
+    font-size: 1.3rem;
   }
 }
 
 @media (max-width: 480px) {
   .contactsH1 {
-    font-size: 2.2em;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
-
+  .contactsH1::after {
+    width: 60px;
+    height: 3px;
+  }
   .ContactInfo,
   .ContactForm {
     padding: 20px;
   }
-
-  .contactP {
+  .ContactInfo .contactP {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  .contactDetails .detailItem {
     font-size: 0.95em;
   }
-
-  .detailItem {
-    font-size: 0.9em;
+  .contact-icon-link {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
   }
-
+  .contact-icon-link .svg-inline--fa {
+    font-size: 0.9rem;
+  }
+  .socialLinks {
+    margin-top: 40px;
+  }
   .socialIconLink {
-    font-size: 1.8em;
+    width: 35px;
+    height: 35px;
+  }
+  .socialIconLink .svg-inline--fa {
+    font-size: 1.3rem;
+  }
+  .formH2 {
+    font-size: 1.5em;
+  }
+  .formInput,
+  .formTextarea {
+    padding: 10px;
+    font-size: 0.95em;
+  }
+  .submitButton {
+    padding: 10px 20px;
+    font-size: 1em;
   }
 }

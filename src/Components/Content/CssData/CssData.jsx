@@ -103,7 +103,7 @@ export const transitionsAndAnimations = `.transform-example {
   animation: fadeIn 2s ease-in-out infinite alternate;
 }`;
 
-export const pseudoClassesAndElements = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const pseudoClassesAndElements = `
 a:hover {
   color: blue;
   text-decoration: none;
@@ -118,7 +118,7 @@ input:focus {
   outline: none;
 }`;
 
-export const CSSSelectors = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSSelectors = `
 .my-class {
   background-color: lightgray;
 }
@@ -135,7 +135,7 @@ div p {
   border: 1px solid #ccc;
 }`;
 
-export const CSSVariables = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSVariables = `
 :root {
   --primary-color: #4CAF50;
   --spacing-unit: 16px;
@@ -146,58 +146,56 @@ export const CSSVariables = `/* Ուշադրություն: Սրանք նոր օ
   padding: var(--spacing-unit);
 }`;
 
-export const CSSSpecificity = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
-/* Ուշադրություն. Specificity-ն կոդի մեջ ուղղակիորեն չի երևում, այլ սահմանվում է ընտրիչների կառուցվածքով: */
-/* Այս հատվածը ցույց է տալիս տարբեր specificity ունեցող ընտրիչներ: */
-p { /* Ցածր specificity */
+export const CSSSpecificity = `
+p { 
   color: purple;
 }
 
-.some-class { /* Միջին specificity */
+.some-class { 
   color: orange;
 }
 
-#some-id { /* Բարձր specificity */
+#some-id { 
   color: darkblue;
 }`;
 
-export const CSSBoxModel = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSBoxModel = `
 .box {
   width: 100px;
   height: 100px;
   padding: 15px;
   margin: 20px;
   border: 5px solid brown;
-  box-sizing: content-box; /* կամ border-box */
+  box-sizing: content-box; 
 }`;
 
-export const CSSUnits = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSUnits = `
 .unit-example {
-  font-size: 1.2em; /* հարաբերական չափ */
-  width: 50vw; /* դիտման դաշտի լայնության 50%-ը */
-  height: 100px; /* բացարձակ չափ */
-  padding: 2rem; /* root em */
-  margin: 5%; /* ծնող տարրի չափի % */
+  font-size: 1.2em;
+  width: 50vw; 
+  height: 100px; 
+  padding: 2rem; 
+  margin: 5%; 
 }`;
 
-export const CSSColors = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSColors = `
 .color-example {
-  color: #FF5733; /* Hex գույն */
+  color: #FF5733; 
   background-color: rgb(75, 192, 192); /* RGB գույն */
-  border-color: rgba(255, 99, 71, 0.8); /* RGBA գույն թափանցիկությամբ */
+  border-color: rgba(255, 99, 71, 0.8); 
   box-shadow: 0 0 10px hsl(240, 100%, 50%); /* HSL գույն */
 }`;
 
-export const CSSFunctions = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSFunctions = `
 .function-example {
-  width: calc(100% - 20px); /* Օգտագործում է calc() ֆունկցիա */
-  transform: translate(10px, 20px); /* Օգտագործում է translate() ֆունկցիա */
-  background-image: linear-gradient(to right, red, yellow); /* Օգտագործում է linear-gradient() ֆունկցիա */
+  width: calc(100% - 20px);
+  transform: translate(10px, 20px); 
+  background-image: linear-gradient(to right, red, yellow); 
 }`;
 
-export const CSSPositioning = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSPositioning = `
 .static-pos {
-  position: static; /* Լռելյայն դիրք */
+  position: static; 
 }
 
 .relative-pos {
@@ -223,7 +221,7 @@ export const CSSPositioning = `/* Ուշադրություն: Սրանք նոր 
   top: 0;
 }`;
 
-export const CSSOverflow = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSOverflow = `
 .overflow-container {
   width: 200px;
   height: 100px;
@@ -231,7 +229,7 @@ export const CSSOverflow = `/* Ուշադրություն: Սրանք նոր օ�
   border: 1px solid gray;
 }`;
 
-export const CSSZIndex = `/* Ուշադրություն: Սրանք նոր օրինակներ են, որոնք համապատասխանում են անվանմանը */
+export const CSSZIndex = `
 .element-one {
   position: relative;
   z-index: 1;

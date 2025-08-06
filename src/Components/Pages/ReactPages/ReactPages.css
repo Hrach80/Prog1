@@ -1,0 +1,223 @@
+.react-page-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.react-page-title {
+  text-align: center;
+  color: #61dafb;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  border-bottom: 3px solid #61dafb;
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.react-section {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section-header {
+  background-color: #383838;
+  color: #f0f0f0;
+  padding: 14px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25em;
+  font-weight: 600;
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
+.section-header:hover {
+  background-color: #444;
+  border-radius: 8px 8px 0 0;
+}
+
+.react-section.open .section-header {
+  border-radius: 8px 8px 0 0;
+}
+
+.toggle-icon {
+  font-size: 1.1em;
+  transition: transform 0.3s ease;
+}
+
+.react-section.open .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out, padding 0.6s ease-in-out, border-top 0.6s ease-in-out;
+  padding: 0 20px;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+.react-section.open .section-content {
+  max-height: 1500px;
+  padding: 15px 20px 20px;
+  border-top: 1px solid #444;
+}
+
+p {
+  margin-bottom: 8px;
+  font-size: 0.95em;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+h3 {
+  color: #61dafb;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  border-bottom: 1px dashed #61dafb;
+  padding-bottom: 4px;
+}
+
+h4 {
+  color: #61dafb;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  font-size: 1em;
+}
+
+.code-example {
+  background-color: #111;
+  border: 1px solid #444;
+  border-left: 5px solid #61dafb;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.code-example pre {
+  margin: 0;
+}
+
+.code-example code {
+  font-family: 'Fira Code', 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 0.88em;
+  color: #f6eec7;
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.external-link,
+.internal-link {
+  color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.external-link:hover,
+.internal-link:hover {
+  color: #45b8d2;
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+
+.external-link svg,
+.internal-link svg {
+  vertical-align: middle;
+  margin-left: 6px;
+  font-size: 0.9em;
+}
+
+input[type="text"] {
+  padding: 8px 10px;
+  border: 1px solid #444;
+  background-color: #383838;
+  color: #e0e0e0;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 0.95em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #61dafb;
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.2);
+  outline: none;
+}
+
+button {
+  padding: 9px 14px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #27ae60;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .react-page-title {
+    font-size: 1.8em;
+    padding-bottom: 10px;
+  }
+  .section-header {
+    font-size: 1.1em;
+    padding: 12px 15px;
+  }
+  .section-content {
+    padding: 12px 15px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .react-page-title {
+    font-size: 1.5em;
+  }
+  .section-header {
+    font-size: 1em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4 {
+    font-size: 0.9em;
+  }
+  .code-example {
+    padding: 10px;
+  }
+}

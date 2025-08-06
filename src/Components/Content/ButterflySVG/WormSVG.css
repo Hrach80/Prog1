@@ -1,0 +1,43 @@
+.worm {
+  position: absolute;
+  width: 64px;
+  height: 62px;
+  transition: left 0.03s linear, top 0.03s linear;
+  pointer-events: none;
+  will-change: left, top;
+}
+
+.worm-segment {
+  animation: wormWiggle 1.2s infinite ease-in-out;
+}
+.worm-segment:nth-child(1) {
+  animation-delay: 0s;
+}
+.worm-segment:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.worm-segment:nth-child(3) {
+  animation-delay: 0.36s;
+}
+.worm-segment:nth-child(4) {
+  animation-delay: 0.54s;
+}
+.worm-segment:nth-child(5) {
+  animation-delay: 0.72s;
+}
+
+@keyframes wormWiggle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(3px);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+}

@@ -2,7 +2,7 @@
   position: sticky;
   z-index: 10;
   bottom: 2px;
-  background-color: black;
+  background-color:transparent;
   max-width: 1440px;
   height: 50px;
   display: flex;
@@ -17,6 +17,7 @@
   padding: 3px 15px;
   border-radius: 10px;
   box-shadow: 0 0 5px 1px blue;
+  background-color: black;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
